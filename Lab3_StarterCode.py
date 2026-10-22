@@ -70,8 +70,11 @@ def count_words(ws):
             ed[w] += 1
         else:
             ed[w] = 1
+            
     # 3. return counts (replace the {})
     return ed
+
+#ko test edit for pull/push#
 
 # The counts, largest first, as an array: c[0] is the count of rank 1
 def rank_counts(counts):
@@ -125,9 +128,13 @@ returns ({"b"}, {"a"}, {"c"})
 # Compare the n most common words of two books
 def compare_top(counts_a, counts_b, n):
     # 1. top_a, top_b: the n most common words of each book
-    
+    top_a = top_words(counts_a, n)
+    top_b = top_words(counts_b, n)
+
+    set_a = set(top_b)
+    set_b = set(top_b)
     # 2. return: in both, in a only, in b only (replace the sets)
-    return set(), set(), set()
+    return set_a, set_a - set_b, set_b - set_a
 
 # Plot count against rank on log-log axes: one set of dots per book,
 # and a dashed line for each fit, over the fitted ranks

@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 """
-YOUR FULL NAME HERE
-YOUR STUDENT ID HERE
+YOUR FULL NAME HERE:             Kevin O'Shea 
+YOUR STUDENT ID HERE:
 
 ASSIGNMENT: COMPLETE count_words, fit_zipf, and compare_top below
 """
@@ -63,11 +63,15 @@ Example: count_words(["the", "cat", "saw", "the", "dog"]) returns
 # Count each distinct word in ws
 def count_words(ws):
     # 1. counts: an empty dictionary
-    pass
+    ed = {}
     # 2. each word: seen before, add one; otherwise, start at one
-    pass
+    for w in ws:
+        if w in ed:
+            ed[w] += 1
+        else:
+            ed[w] = 1
     # 3. return counts (replace the {})
-    return {}
+    return ed
 
 # The counts, largest first, as an array: c[0] is the count of rank 1
 def rank_counts(counts):

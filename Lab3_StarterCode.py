@@ -70,8 +70,11 @@ def count_words(ws):
             ed[w] += 1
         else:
             ed[w] = 1
+            
     # 3. return counts (replace the {})
     return ed
+
+#ko test edit for pull/push#
 
 # The counts, largest first, as an array: c[0] is the count of rank 1
 def rank_counts(counts):
